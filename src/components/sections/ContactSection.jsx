@@ -13,9 +13,7 @@ function ContactSection() {
   return (
     <section id="contacto" className="bg-white px-0 py-12 md:py-16">
       <div className="mx-auto w-[90vw]">
-        <p className="text-xs font-semibold tracking-wide text-blue-700 uppercase">
-          {contact.sectionLabel}
-        </p>
+
         <h2 className="mt-3 text-[1.95rem] leading-tight font-extrabold text-navy md:text-[2.8rem]">
           {contact.title}
         </h2>
@@ -132,8 +130,6 @@ function ContactSection() {
               {contact.submitLabel}
             </button>
 
-            <p className="text-sm text-graphite">{contact.formNote}</p>
-
             {feedback ? (
               <p role="status" className="rounded-md border border-border bg-ivory px-3 py-2 text-sm">
                 {feedback}
@@ -142,38 +138,43 @@ function ContactSection() {
           </form>
 
           <aside className="rounded-2xl border border-white/20 bg-navy p-5 text-white md:p-6">
-            <h3 className="text-[1.8rem] leading-tight font-bold text-amber uppercase">
+            <h3 className="leading-tight font-bold text-amber uppercase">
               {contact.directContact.title}
             </h3>
 
             <div className="mt-5 space-y-5">
               <div>
-                <p className="text-[1.2rem] font-semibold">{contact.directContact.emailLabel}</p>
-                <p className="mt-1 text-[1.2rem] text-white/90">{contact.directContact.emailValue}</p>
+                <p className="font-semibold">{contact.directContact.emailLabel}</p>
+                <a
+                  href={contact.directContact.emailHref}
+                  className="mt-1 inline-flex text-white/90 hover:text-white"
+                >
+                  {contact.directContact.emailValue}
+                </a>
               </div>
 
               <div>
-                <p className="text-[1.2rem] font-semibold">{contact.directContact.phonesLabel}</p>
-                <ul className="mt-1 space-y-1 text-[1.2rem] text-white/90">
-                  {contact.directContact.phones.map((phone, index) => (
-                    <li key={`${phone}-${index}`}>{phone}</li>
+                <p className="font-semibold">{contact.directContact.phonesLabel}</p>
+                <ul className="mt-1 space-y-1  text-white/90">
+                  {contact.directContact.phones.map((phone) => (
+                    <li key={phone.label}>
+                      <a href={phone.href} className="hover:text-white">
+                        {phone.label}
+                      </a>
+                    </li>
                   ))}
                 </ul>
               </div>
             </div>
 
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-md border border-[#2fa15f] bg-[#2fa15f] px-4 text-sm font-semibold tracking-wide text-white uppercase opacity-80"
+            <a
+              href={contact.directContact.whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-md border border-[#2fa15f] bg-[#2fa15f] px-4 text-sm font-semibold tracking-wide text-white uppercase transition hover:brightness-105"
             >
               {contact.directContact.whatsappLabel}
-            </button>
-            <p className="mt-4 text-[1.2rem] text-white/85">{contact.directContact.whatsappValue}</p>
-            <p className="mt-4 rounded-md border border-white/20 bg-white/5 p-3 text-sm text-white/85">
-              {contact.helper}
-            </p>
+            </a>
           </aside>
         </div>
       </div>

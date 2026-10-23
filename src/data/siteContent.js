@@ -22,6 +22,7 @@ export const siteContent = {
     primaryCta: { label: "Solicitar servicio", href: "#contacto", src: "/src/assets/icons/icon_MdiFileDocument.svg" },
     whatsappCtaLabel: "Contáctanos por WhatsApp",
     whatsappCtaIcon: "/src/assets/icons/icon_MdiWhatsapp.svg",
+    whatsappHref: "https://wa.me/50763683646",
     // TODO: Reemplazar por imagen real corporativa cuando el cliente la comparta.
     imageUrl: "/src/assets/hero_6.PNG",
     imageAlt: "Operación logística de SEMARINT",
@@ -198,9 +199,9 @@ export const siteContent = {
     imageAlt: "Contacto operativo de SEMARINT",
     imageCaption: "Panamá · Caribe · Mundo",
     formTitle: "Formulario de solicitud",
-    // TODO: Confirmar y publicar correo, teléfono, dirección y enlace oficial de WhatsApp.
+    // TODO: Confirmar dirección física oficial.
     helper:
-      "Información por confirmar: correo, teléfono, dirección y enlace oficial de WhatsApp.",
+      "Información por confirmar: dirección física oficial de SEMARINT.",
     fields: {
       fullName: "Nombre completo",
       company: "Empresa",
@@ -214,11 +215,16 @@ export const siteContent = {
     directContact: {
       title: "Contacto directo",
       emailLabel: "Correo electrónico",
-      emailValue: "Información por confirmar",
+      emailValue: "reservas@semarint.com",
+      emailHref: "mailto:reservas@semarint.com",
       phonesLabel: "Teléfonos",
-      phones: ["Información por confirmar", "Información por confirmar"],
+      phones: [
+        { label: "+507 262-8400", href: "tel:+5072628400" },
+        { label: "+507 6368-3646", href: "tel:+50763683646" },
+      ],
       whatsappLabel: "WhatsApp directo",
-      whatsappValue: "Información por confirmar",
+      whatsappValue: "wa.me/50763683646",
+      whatsappHref: "https://wa.me/50763683646",
     },
     pendingIntegration:
       "Integración pendiente: este formulario aún no está conectado a un servicio de envío.",

@@ -38,18 +38,32 @@ function HeroSection() {
                 )}
                 {hero.primaryCta.label}
               </a>
-              <button
-                type="button"
-                disabled
-                aria-disabled="true"
-                className="inline-flex min-h-11 items-center rounded-full bg-white/12 px-4 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_8px_22px_rgba(8,18,28,0.22)] backdrop-blur-md"
-                title="Información por confirmar"
-              >
-                {hero.whatsappCtaIcon && (
-                  <img src={hero.whatsappCtaIcon} alt="" className="mr-2 h-4 w-4" />
-                )}
-                {hero.whatsappCtaLabel}
-              </button>
+              {hero.whatsappHref ? (
+                <a
+                  href={hero.whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center rounded-full bg-white/12 px-4 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_8px_22px_rgba(8,18,28,0.22)] backdrop-blur-md"
+                >
+                  {hero.whatsappCtaIcon && (
+                    <img src={hero.whatsappCtaIcon} alt="" className="mr-2 h-4 w-4" />
+                  )}
+                  {hero.whatsappCtaLabel}
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  disabled
+                  aria-disabled="true"
+                  className="inline-flex min-h-11 items-center rounded-full bg-white/12 px-4 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_8px_22px_rgba(8,18,28,0.22)] backdrop-blur-md"
+                  title="Información por confirmar"
+                >
+                  {hero.whatsappCtaIcon && (
+                    <img src={hero.whatsappCtaIcon} alt="" className="mr-2 h-4 w-4" />
+                  )}
+                  {hero.whatsappCtaLabel}
+                </button>
+              )}
             </div>
           </div>
         </figcaption>
