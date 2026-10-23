@@ -193,8 +193,7 @@ export const siteContent = {
   contact: {
     sectionLabel: "Sección 6 · Contacto",
     title: "Solicita tu servicio",
-    intro:
-      "Cuéntanos qué necesitas transportar. Nuestro equipo podrá contactarte para dar seguimiento.",
+    intro:"Cuéntanos qué necesitas transportar. Nuestro equipo podrá contactarte para dar seguimiento.",
     imageUrl: "/src/assets/logistic_1.jpg",
     imageAlt: "Contacto operativo de SEMARINT",
     imageCaption: "Panamá · Caribe · Mundo",
