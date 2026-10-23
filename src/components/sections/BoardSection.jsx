@@ -1,5 +1,6 @@
 import { siteContent } from '../../data/siteContent'
 
+
 function BoardSection() {
   const { board } = siteContent
 
@@ -15,28 +16,28 @@ function BoardSection() {
         </h4>
         <p className="mt-2 max-w-[65ch] leading-relaxed text-graphite">{board.intro}</p>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 grid justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {board.members.map((member, index) => (
             <article
               key={`${member.name}-${index}`}
-              className="rounded-2xl border border-border bg-white p-4 shadow-[0_8px_30px_rgba(20,53,85,0.06)]"
+              className="flex w-full max-w-sm flex-col rounded-2xl border border-border bg-white p-4 text-center shadow-[0_8px_30px_rgba(20,53,85,0.06)]"
             >
-              <div className="overflow-hidden rounded-xl border border-border bg-slate-50">
+              <div className="flex h-64 items-center justify-center overflow-hidden rounded-xl border border-border bg-slate-50">
                 {member.imageUrl ? (
                   <img
                     src={member.imageUrl}
                     alt={`Foto de ${member.name}`}
-                    className="h-40 w-full object-cover"
+                    className="max-h-full max-w-full object-contain"
                   />
                 ) : (
-                  <div className="flex h-40 items-center justify-center text-3xl font-bold tracking-wide text-slate-500">
-                    IMAGEN
+                  <div className="flex h-full w-full items-center justify-center text-3xl font-bold tracking-wide text-slate-500">
+                    {member.initials || member.name.charAt(0)}
                   </div>
                 )}
               </div>
               <h3 className="mt-4 leading-tight font-bold text-navy">{member.name}</h3>
               <p className="mt-2 leading-relaxed text-graphite">{member.role}</p>
-              <div className="mt-4 h-1 w-16 rounded-full bg-amber" />
+              <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-amber" />
             </article>
           ))}
         </div>

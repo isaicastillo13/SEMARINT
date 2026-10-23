@@ -175,18 +175,18 @@ export const siteContent = {
     members: [
       {
         name: "Lic. Arianna Peréz Acosta",
-        role: "Directora Presidenta",
-        imageUrl: "",
+        role: "Directora Presidente",
+        imageUrl: "/src/assets/lic_arianna_perez.jpeg",
       },
       {
         name: "Lic. Adolfo Renso Timana Chepote",
         role: "Director Tesorero",
-        imageUrl: "",
+        imageUrl: "/src/assets/lic_adolfo_timana.jpeg",
       },
       {
         name: "Cap. Juan Carlos Madrid Olmos",
         role: "Director Vocal",
-        imageUrl: "",
+        imageUrl: "/src/assets/cap_juan_madrid.jpeg",
       },
     ],
   },
