@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-navy: #0b2239;
+  --color-ivory: #f5f7f8;
+  --color-graphite: #263746;
+  --color-amber: #d99a3d;
+  --color-border: #d7e0e6;
+  --color-whatsapp: #1f9f54;
+  --color-surfaceAlt: #eef3f6;
+}
+
+@layer base {
+  :root {
+    font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color: var(--color-graphite);
+    background: var(--color-ivory);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-ivory text-graphite;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply m-0 text-navy;
+  }
+
+  p {
+    @apply m-0;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply focus-visible:outline-3 focus-visible:outline-amber focus-visible:outline-offset-2;
+  }
+}
