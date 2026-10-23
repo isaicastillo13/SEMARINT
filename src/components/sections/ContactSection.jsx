@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { siteContent } from '../../data/siteContent'
+import contactImage from '../../assets/logistic_1.jpg'
 
 function ContactSection() {
   const { contact } = siteContent
@@ -22,7 +23,7 @@ function ContactSection() {
         <div className="mt-8 grid gap-4 xl:grid-cols-[0.72fr_1.12fr_0.7fr]">
           <figure className="overflow-hidden rounded-2xl border border-border bg-slate-200">
             <img
-              src={contact.imageUrl}
+              src={contactImage}
               alt={contact.imageAlt}
               className="h-full min-h-[300px] w-full object-cover"
             />

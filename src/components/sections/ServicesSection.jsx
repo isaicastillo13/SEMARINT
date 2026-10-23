@@ -1,4 +1,5 @@
 import { siteContent } from '../../data/siteContent'
+import servicesImage from '../../assets/hero_4.jpg'
 
 function ServicesSection() {
   const { services } = siteContent
@@ -41,7 +42,7 @@ function ServicesSection() {
 
           <figure className="overflow-hidden rounded-2xl border border-border bg-slate-200">
             <img
-              src={services.imageUrl}
+              src={servicesImage}
               alt={services.imageAlt}
               className="h-full min-h-[300px] w-full object-cover"
             />

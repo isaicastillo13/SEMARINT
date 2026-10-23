@@ -1,4 +1,5 @@
 import { siteContent } from '../../data/siteContent'
+import navbarLogo from '../../assets/Logo.jpg'
 
 function Navbar() {
   const { hero } = siteContent;
@@ -13,7 +14,7 @@ function Navbar() {
           className="flex items-center gap-3 text-white"
         >
           <img
-            src={navbar.logo}
+            src={navbarLogo}
             alt={navbar.imageAlt}
             className="h-14 w-14 shrink-0 rounded-sm object-cover"
           />

@@ -1,4 +1,7 @@
 import { siteContent } from "../../data/siteContent";
+import heroBackground from "../../assets/hero_6.PNG";
+import documentIcon from "../../assets/icons/icon_MdiFileDocument.svg";
+import whatsappIcon from "../../assets/icons/icon_MdiWhatsapp.svg";
 
 function HeroSection() {
   const { hero } = siteContent;
@@ -6,9 +9,9 @@ function HeroSection() {
   return (
     <section id="inicio" className="p-0">
       <figure className="relative min-h-[78vh] overflow-hidden bg-slate-200">
-        {hero.imageUrl ? (
+        {heroBackground ? (
           <img
-            src={hero.imageUrl}
+            src={heroBackground}
             alt={hero.imageAlt}
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -33,9 +36,7 @@ function HeroSection() {
                 href={hero.primaryCta.href}
                 className="inline-flex min-h-11 items-center rounded-full bg-gradient-to-b from-[#f8dd8f] via-[#dca54a] to-[#b97823] px-4 text-sm font-semibold text-[#1d2732] shadow-[inset_0_1px_0_rgba(255,244,204,0.9),inset_0_-2px_0_rgba(120,74,19,0.35),0_8px_22px_rgba(8,18,28,0.24)] transition hover:-translate-y-0.5 hover:brightness-105 focus-visible:ring-2 focus-visible:ring-[#f3d38a]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
               >
-                {hero.primaryCta.src && (
-                  <img src={hero.primaryCta.src} alt="" className="mr-2 h-4 w-4" />
-                )}
+                <img src={documentIcon} alt="" className="mr-2 h-4 w-4" />
                 {hero.primaryCta.label}
               </a>
               {hero.whatsappHref ? (
@@ -45,9 +46,7 @@ function HeroSection() {
                   rel="noreferrer"
                   className="inline-flex min-h-11 items-center rounded-full bg-white/12 px-4 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_8px_22px_rgba(8,18,28,0.22)] backdrop-blur-md"
                 >
-                  {hero.whatsappCtaIcon && (
-                    <img src={hero.whatsappCtaIcon} alt="" className="mr-2 h-4 w-4" />
-                  )}
+                  <img src={whatsappIcon} alt="" className="mr-2 h-4 w-4" />
                   {hero.whatsappCtaLabel}
                 </a>
               ) : (
@@ -58,9 +57,7 @@ function HeroSection() {
                   className="inline-flex min-h-11 items-center rounded-full bg-white/12 px-4 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_8px_22px_rgba(8,18,28,0.22)] backdrop-blur-md"
                   title="Información por confirmar"
                 >
-                  {hero.whatsappCtaIcon && (
-                    <img src={hero.whatsappCtaIcon} alt="" className="mr-2 h-4 w-4" />
-                  )}
+                  <img src={whatsappIcon} alt="" className="mr-2 h-4 w-4" />
                   {hero.whatsappCtaLabel}
                 </button>
               )}
