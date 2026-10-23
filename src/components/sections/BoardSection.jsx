@@ -1,5 +1,13 @@
 import { siteContent } from '../../data/siteContent'
+import ariannaImage from '../../assets/lic_arianna_perez.jpeg'
+import adolfoImage from '../../assets/lic_adolfo_timana.jpeg'
+import juanImage from '../../assets/cap_juan_madrid.jpeg'
 
+const memberImages = {
+  '/src/assets/lic_arianna_perez.jpeg': ariannaImage,
+  '/src/assets/lic_adolfo_timana.jpeg': adolfoImage,
+  '/src/assets/cap_juan_madrid.jpeg': juanImage,
+}
 
 function BoardSection() {
   const { board } = siteContent
@@ -23,9 +31,9 @@ function BoardSection() {
               className="flex w-full max-w-sm flex-col rounded-2xl border border-border bg-white p-4 text-center shadow-[0_8px_30px_rgba(20,53,85,0.06)]"
             >
               <div className="flex h-64 items-center justify-center overflow-hidden rounded-xl border border-border bg-slate-50">
-                {member.imageUrl ? (
+                {memberImages[member.imageUrl] ? (
                   <img
-                    src={member.imageUrl}
+                    src={memberImages[member.imageUrl]}
                     alt={`Foto de ${member.name}`}
                     className="max-h-full max-w-full object-contain"
                   />
