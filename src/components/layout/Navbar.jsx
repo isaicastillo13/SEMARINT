@@ -1,5 +1,5 @@
 import { siteContent } from '../../data/siteContent'
-import navbarLogo from '../../assets/Logo.jpg'
+import navbarLogo from '../../assets/Logo.jpeg'
 
 function Navbar() {
   const { hero } = siteContent;
