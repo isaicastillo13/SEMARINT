@@ -1,24 +1,25 @@
-import { useState } from 'react'
-import { siteContent } from '../../data/siteContent'
-import contactImage from '../../assets/logistic_1.jpg'
+import { useState } from "react";
+import { siteContent } from "../../data/siteContent";
+import contactImage from "../../assets/logistic_2.png";
 
 function ContactSection() {
-  const { contact } = siteContent
-  const [feedback, setFeedback] = useState('')
+  const { contact } = siteContent;
+  const [feedback, setFeedback] = useState("");
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    setFeedback(contact.pendingIntegration)
-  }
+    event.preventDefault();
+    setFeedback(contact.pendingIntegration);
+  };
 
   return (
     <section id="contacto" className="bg-white px-0 py-12 md:py-16">
       <div className="mx-auto w-[90vw]">
-
         <h2 className="mt-3 text-[1.95rem] leading-tight font-extrabold text-navy md:text-[2.8rem]">
           {contact.title}
         </h2>
-        <p className="mt-2 max-w-[70ch] leading-relaxed text-graphite">{contact.intro}</p>
+        <p className="mt-2 max-w-[70ch] leading-relaxed text-graphite">
+          {contact.intro}
+        </p>
 
         <div className="mt-8 grid gap-4 xl:grid-cols-[0.72fr_1.12fr_0.7fr]">
           <figure className="overflow-hidden rounded-2xl border border-border bg-slate-200">
@@ -132,7 +133,10 @@ function ContactSection() {
             </button>
 
             {feedback ? (
-              <p role="status" className="rounded-md border border-border bg-ivory px-3 py-2 text-sm">
+              <p
+                role="status"
+                className="rounded-md border border-border bg-ivory px-3 py-2 text-sm"
+              >
                 {feedback}
               </p>
             ) : null}
@@ -145,7 +149,9 @@ function ContactSection() {
 
             <div className="mt-5 space-y-5">
               <div>
-                <p className="font-semibold">{contact.directContact.emailLabel}</p>
+                <p className="font-semibold">
+                  {contact.directContact.emailLabel}
+                </p>
                 <a
                   href={contact.directContact.emailHref}
                   className="mt-1 inline-flex text-white/90 hover:text-white"
@@ -155,7 +161,9 @@ function ContactSection() {
               </div>
 
               <div>
-                <p className="font-semibold">{contact.directContact.phonesLabel}</p>
+                <p className="font-semibold">
+                  {contact.directContact.phonesLabel}
+                </p>
                 <ul className="mt-1 space-y-1  text-white/90">
                   {contact.directContact.phones.map((phone) => (
                     <li key={phone.label}>
@@ -180,7 +188,7 @@ function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default ContactSection
+export default ContactSection;

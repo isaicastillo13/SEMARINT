@@ -1,20 +1,25 @@
-import { siteContent } from '../../data/siteContent'
-import servicesImage from '../../assets/hero_4.jpg'
+import { siteContent } from "../../data/siteContent";
+import servicesImage from "../../assets/hero_7.png";
 
 function ServicesSection() {
-  const { services } = siteContent
-  const topBorderAccent = ['border-t-sky-400', 'border-t-amber', 'border-t-blue-700']
+  const { services } = siteContent;
+  const topBorderAccent = [
+    "border-t-sky-400",
+    "border-t-amber",
+    "border-t-blue-700",
+  ];
 
   return (
     <section id="servicios" className="bg-surfaceAlt px-0 py-4">
       <div className="mx-auto w-[90vw]">
         <div className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr] xl:items-stretch">
           <div>
-
             <h2 className="mt-3 text-[1.9rem] leading-tight font-extrabold text-navy md:text-[2.65rem]">
               {services.title}
             </h2>
-            <p className="mt-2 max-w-[65ch] leading-relaxed text-graphite">{services.intro}</p>
+            <p className="mt-2 max-w-[65ch] leading-relaxed text-graphite">
+              {services.intro}
+            </p>
 
             <div className="mt-8 grid gap-4 lg:grid-cols-3">
               {services.items.map((service, index) => (
@@ -25,7 +30,9 @@ function ServicesSection() {
                   <h3 className="leading-tight font-bold text-navy">
                     {service.title}
                   </h3>
-                  <p className="mt-2 leading-relaxed text-graphite">{service.description}</p>
+                  <p className="mt-2 leading-relaxed text-graphite">
+                    {service.description}
+                  </p>
                 </article>
               ))}
             </div>
@@ -50,7 +57,7 @@ function ServicesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default ServicesSection
+export default ServicesSection;
